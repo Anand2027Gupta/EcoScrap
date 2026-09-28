@@ -42,6 +42,23 @@ EcoScrap combines **5 core capabilities** into an accessible, low-literacy workf
 
 ---
 
+## Production Deployment Architecture
+
+```text
+Browser Client (HTTPS)
+   ├──▶ Vercel (React 19 + Vite SPA with SPA rewrite rules)
+   │       └── Environment: VITE_API_URL=https://<render-backend-url>
+   │
+   └──▶ Render Web Service (FastAPI 0.141 on Python 3.11, $PORT)
+           ├── AI Engine: PyTorch CPU (MobileNetV3-Small, 6.28 MB)
+           ├── Pricing Engine: scikit-learn (RandomForestRegressor)
+           └── Database: MongoDB Atlas (TLS URI, DB: ewaste)
+```
+
+See [docs/PRODUCTION_DEPLOYMENT.md](docs/PRODUCTION_DEPLOYMENT.md) for the complete cloud setup guide.
+
+---
+
 ## AI System & Model Performance
 
 - **Model Architecture**: MobileNetV3-Small fine-tuned on e-waste imagery (`backend/ai/model/e_waste_mobilenetv3.pth`).

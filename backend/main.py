@@ -1,5 +1,7 @@
+import os
 from pathlib import Path
 
+from dotenv import load_dotenv
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
@@ -11,6 +13,9 @@ from routes.recycler_routes import router as recycler_router
 from routes.handover_routes import router as handover_router
 from routes.anomaly_routes import router as anomaly_router
 from database import check_database_connection
+
+# Load environment configuration
+load_dotenv()
 
 # =========================================================
 # FASTAPI APP
@@ -27,11 +32,26 @@ app = FastAPI(
 # CORS
 # =========================================================
 
+DEFAULT_ALLOWED_ORIGINS = [
+    "http://localhost:5173",
+    "http://127.0.0.1:5173",
+    "http://localhost:3000",
+    "http://127.0.0.1:3000",
+]
+
+configured_origins_raw = os.getenv("FRONTEND_URL", "")
+configured_origins = [
+    origin.strip()
+    for origin in configured_origins_raw.split(",")
+    if origin.strip()
+]
+
+cors_origins = list(dict.fromkeys(DEFAULT_ALLOWED_ORIGINS + configured_origins))
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[
-        "http://localhost:5173"
-    ],
+    allow_origins=cors_origins,
+    allow_origin_regex=r"^https://.*\.vercel\.app$",
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
