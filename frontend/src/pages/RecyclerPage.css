@@ -1,0 +1,246 @@
+/* =========================================================
+   RECYCLER PAGE
+   ========================================================= */
+
+.recycler-card.selected {
+  border: 2px solid var(--primary);
+  background: #f4fbf6;
+  animation: selectedPulse 0.4s ease;
+}
+
+.recycler-page {
+  width: 100%;
+}
+
+.recycler-page-content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.recycler-lot-section, .recycler-search-section, .recycler-selected-section {
+  background: #ffffff;
+  border: 1px solid #e2e8e5;
+  border-radius: 16px;
+  padding: 24px;
+}
+
+.section-step {
+  display: inline-block;
+  margin-bottom: 7px;
+  color: #16a34a;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+.recycler-lot-selector {
+  display: grid;
+  grid-template-columns: repeat( auto-fit, minmax(260px, 1fr) );
+  gap: 12px;
+}
+
+.recycler-lot-option {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding: 15px;
+  text-align: left;
+  border: 1px solid #dbe5df;
+  border-radius: 13px;
+  background: #ffffff;
+  cursor: pointer;
+  transition: border-color 0.2s ease, background 0.2s ease, transform 0.2s ease;
+}
+
+.recycler-lot-option:hover {
+  border-color: #16a34a;
+  transform: translateY(-1px);
+}
+
+.recycler-lot-option.selected {
+  border: 2px solid #16a34a;
+  background: #f0fdf4;
+}
+
+.lot-option-icon {
+  width: 43px;
+  height: 43px;
+  min-width: 43px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 11px;
+  background: #ecfdf3;
+  font-size: 21px;
+}
+
+.lot-option-info {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.lot-option-info strong {
+  color: #172033;
+  font-size: 15px;
+}
+
+.lot-option-info span {
+  color: #475569;
+  font-size: 13px;
+}
+
+.lot-option-info small {
+  color: #94a3b8;
+  font-size: 11px;
+}
+
+.lot-option-check {
+  margin-left: auto;
+  color: #16a34a;
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.selected-lot-summary {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 20px;
+  border: 1px solid #bbf7d0;
+  border-radius: 15px;
+  background: #f0fdf4;
+}
+
+.selected-lot-icon {
+  width: 52px;
+  height: 52px;
+  min-width: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 13px;
+  background: #dcfce7;
+  font-size: 25px;
+}
+
+.selected-lot-summary-info {
+  min-width: 0;
+  flex: 1;
+}
+
+.selected-lot-summary-info span, .selected-lot-value span {
+  display: block;
+  margin-bottom: 4px;
+  color: #64748b;
+  font-size: 12px;
+}
+
+.selected-lot-summary-info h3 {
+  margin: 0 0 5px;
+  color: #166534;
+  font-size: 19px;
+}
+
+.selected-lot-summary-info p {
+  margin: 0;
+  color: #475569;
+  font-size: 13px;
+}
+
+.selected-lot-value {
+  text-align: right;
+}
+
+.selected-lot-value strong {
+  color: #166534;
+  font-size: 22px;
+}
+
+.recycler-search-wrapper {
+  width: 100%;
+}
+
+.recycler-search-wrapper .recycler-search {
+  width: 100%;
+}
+
+.recycler-help-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 18px;
+  border: 1px solid #dbe5df;
+  border-radius: 14px;
+  background: #ffffff;
+}
+
+.recycler-help-icon {
+  font-size: 25px;
+}
+
+.recycler-help-card h3 {
+  margin: 0 0 5px;
+  color: #172033;
+  font-size: 15px;
+}
+
+.recycler-help-card p {
+  margin: 0;
+  color: #64748b;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.recycler-page-state {
+  padding: 60px 25px;
+  text-align: center;
+  border: 1px solid #e2e8e5;
+  border-radius: 16px;
+  background: #ffffff;
+}
+
+.recycler-state-icon {
+  margin-bottom: 12px;
+  font-size: 45px;
+}
+
+.recycler-page-state h3 {
+  margin: 0 0 8px;
+  color: #172033;
+}
+
+.recycler-page-state p {
+  margin: 0 0 20px;
+  color: #64748b;
+}
+
+@media (max-width: 700px) {
+  .recycler-lot-section, .recycler-search-section, .recycler-selected-section {
+    padding: 17px;
+  }
+}
+
+@media (max-width: 700px) {
+  .selected-lot-summary {
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 700px) {
+  .selected-lot-value {
+    width: 100%;
+    padding-left: 68px;
+    text-align: left;
+  }
+}
+
+@media (max-width: 700px) {
+  .recycler-help-card {
+    padding: 15px;
+  }
+}

@@ -1,0 +1,114 @@
+/* =========================================================
+   PRICE BOARD PAGE
+   ========================================================= */
+
+.price-board-page {
+  width: 100%;
+}
+
+.price-board-page-content {
+  width: 100%;
+}
+
+.price-board-info-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.price-info-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  background: #ffffff;
+  border: 1px solid #e2e8e5;
+  border-radius: 14px;
+  padding: 18px;
+}
+
+.price-info-icon {
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background: #ecfdf3;
+  font-size: 22px;
+}
+
+.price-info-card h3 {
+  margin: 0 0 6px;
+  color: #172033;
+  font-size: 16px;
+}
+
+.price-info-card p {
+  margin: 0;
+  color: #64748b;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.price-board-main-card {
+  background: #ffffff;
+  border: 1px solid #e2e8e5;
+  border-radius: 16px;
+  padding: 24px;
+  box-sizing: border-box;
+}
+
+.price-board-main-card > div {
+  margin-top: 0 !important;
+}
+
+.price-board-main-card select {
+  cursor: pointer;
+  border-color: #dbe5df !important;
+  color: #172033;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.price-board-main-card select:focus {
+  border-color: #16a34a !important;
+  box-shadow: 0 0 0 3px rgba(22, 163, 74, 0.1);
+}
+
+.price-board-main-card [style*="grid-template-columns"] {
+  width: 100%;
+}
+
+.price-board-main-card [style*="border: 1px solid #ddd"] {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.price-board-main-card [style*="border: 1px solid #ddd"]:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(15, 23, 42, 0.07);
+}
+
+@media (max-width: 1000px) {
+  .price-board-info-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 1000px) {
+  .price-board-main-card {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 650px) {
+  .price-board-main-card {
+    padding: 16px;
+  }
+}
+
+@media (max-width: 650px) {
+  .price-info-card {
+    padding: 15px;
+  }
+}

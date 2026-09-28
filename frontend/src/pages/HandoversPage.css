@@ -1,0 +1,145 @@
+/* =========================================================
+   HANDOVERS PAGE
+   ========================================================= */
+
+.handovers-page {
+  width: 100%;
+}
+
+.handover-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.handover-alert {
+  margin-bottom: 20px;
+}
+
+.handover-success-alert {
+  display: flex;
+  align-items: flex-start;
+  gap: 13px;
+  margin-bottom: 20px;
+  padding: 16px 18px;
+  border: 1px solid #bbf7d0;
+  border-radius: 13px;
+  background: #f0fdf4;
+  color: #166534;
+}
+
+.handover-success-alert > span {
+  width: 27px;
+  height: 27px;
+  min-width: 27px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #16a34a;
+  color: #ffffff;
+  font-weight: 800;
+}
+
+.handover-success-alert strong {
+  display: block;
+  margin-bottom: 3px;
+}
+
+.handover-success-alert p {
+  margin: 0;
+  font-size: 13px;
+}
+
+.handover-request-section, .handover-status-section {
+  margin-bottom: 25px;
+  padding: 24px;
+  border: 1px solid #e2e8e5;
+  border-radius: 16px;
+  background: #ffffff;
+}
+
+.handover-section-heading {
+  margin-bottom: 20px;
+}
+
+.handover-section-heading > div > span {
+  display: inline-block;
+  margin-bottom: 7px;
+  color: #16a34a;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+.handover-section-heading h2 {
+  margin: 0 0 6px;
+  color: #172033;
+  font-size: 21px;
+}
+
+.handover-section-heading p {
+  margin: 0;
+  color: #64748b;
+  font-size: 14px;
+}
+
+.handover-empty-card {
+  margin-bottom: 25px;
+  padding: 55px 25px;
+  text-align: center;
+  border: 1px solid #e2e8e5;
+  border-radius: 16px;
+  background: #ffffff;
+}
+
+.handover-empty-icon {
+  margin-bottom: 12px;
+  font-size: 48px;
+}
+
+.handover-empty-card h2 {
+  margin: 0 0 8px;
+  color: #172033;
+  font-size: 21px;
+}
+
+.handover-empty-card p {
+  max-width: 500px;
+  margin: 0 auto 20px;
+  color: #64748b;
+}
+
+.handover-empty-actions {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.handover-status-wrapper {
+  width: 100%;
+}
+
+.handover-status-wrapper > div {
+  margin-top: 0 !important;
+}
+
+@media (max-width: 700px) {
+  .handover-request-section, .handover-status-section {
+    padding: 17px;
+  }
+}
+
+@media (max-width: 700px) {
+  .handover-header-actions {
+    width: 100%;
+  }
+}
+
+@media (max-width: 700px) {
+  .handover-header-actions .btn {
+    flex: 1;
+  }
+}

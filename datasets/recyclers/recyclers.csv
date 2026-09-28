@@ -1,0 +1,6 @@
+recycler_id,name,location,materials_accepted,authorization_status,offered_rate_per_kg,pickup_available,service_area
+R001,GreenTech Recycling,Gorakhpur,PCB|Battery|Mobile|Laptop,Authorized,410,Yes,Gorakhpur|Deoria
+R002,Eco E-Waste Solutions,Deoria,PCB|Laptop|Printer|Television,Authorized,390,Yes,Deoria|Gorakhpur
+R003,UP E-Cycle Recycling,Lucknow,PCB|Battery|Mobile|Laptop|Television,Authorized,430,No,Lucknow|Gorakhpur
+R004,Smart Scrap Recycling,Gorakhpur,Keyboard|Mouse|Printer|PCB,Authorized,360,Yes,Gorakhpur
+R005,Safe Battery Recyclers,Lucknow,Battery,Authorized,190,Yes,Lucknow|Gorakhpur|Deoria

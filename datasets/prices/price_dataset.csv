@@ -1,0 +1,21 @@
+material_category,material_subcategory,location,price_per_kg,date
+PCB,Computer PCB,Gorakhpur,400,2026-08-01
+PCB,Computer PCB,Gorakhpur,410,2026-08-15
+PCB,Computer PCB,Gorakhpur,420,2026-09-01
+PCB,Computer PCB,Gorakhpur,415,2026-09-15
+Battery,Lithium Battery,Gorakhpur,180,2026-08-01
+Battery,Lithium Battery,Gorakhpur,185,2026-08-15
+Battery,Lithium Battery,Gorakhpur,190,2026-09-01
+Battery,Lithium Battery,Gorakhpur,195,2026-09-15
+Laptop,Laptop Scrap,Gorakhpur,220,2026-08-01
+Laptop,Laptop Scrap,Gorakhpur,225,2026-08-15
+Laptop,Laptop Scrap,Gorakhpur,230,2026-09-01
+Laptop,Laptop Scrap,Gorakhpur,235,2026-09-15
+Mobile,Mobile Scrap,Gorakhpur,300,2026-08-01
+Mobile,Mobile Scrap,Gorakhpur,310,2026-08-15
+Mobile,Mobile Scrap,Gorakhpur,320,2026-09-01
+Mobile,Mobile Scrap,Gorakhpur,315,2026-09-15
+Printer,Printer Scrap,Gorakhpur,120,2026-08-01
+Printer,Printer Scrap,Gorakhpur,125,2026-08-15
+Printer,Printer Scrap,Gorakhpur,130,2026-09-01
+Printer,Printer Scrap,Gorakhpur,128,2026-09-15

@@ -1,0 +1,24 @@
+                   precision    recall  f1-score   support
+
+  Air-Conditioner     0.8750    0.9800    0.9245       100
+          Battery     0.9406    0.9500    0.9453       100
+         Keyboard     0.9519    0.9900    0.9706       100
+           Laptop     0.9604    0.9700    0.9652       100
+     Microchip-IC     0.8174    0.9400    0.8744       100
+        Microwave     0.8796    0.9500    0.9135       100
+           Mobile     0.9412    0.9600    0.9505       100
+            Mouse     0.9802    0.9900    0.9851       100
+              PCB     0.9783    0.9000    0.9375       100
+Passive-Component     0.7647    0.9100    0.8311       100
+          Printer     0.9663    0.8600    0.9101       100
+     Refrigerator     0.9583    0.9200    0.9388       100
+         Resistor     1.0000    0.9300    0.9637       100
+       Television     0.9892    0.9200    0.9534       100
+  Washing Machine     1.0000    0.9300    0.9637       100
+        heat-sink     0.9778    0.8800    0.9263       100
+      light bulbs     0.9796    0.9600    0.9697       100
+       transistor     1.0000    0.9300    0.9637       100
+
+         accuracy                         0.9372      1800
+        macro avg     0.9423    0.9372    0.9382      1800
+     weighted avg     0.9423    0.9372    0.9382      1800

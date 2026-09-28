@@ -1,0 +1,75 @@
+/* =========================================================
+   PRICE ESTIMATE CARD
+   ========================================================= */
+
+.price-estimate-card {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 18px;
+  padding: 18px;
+  border: 1px solid #cfe8d6;
+  border-radius: 17px;
+  background: linear-gradient( 135deg, #effaf3, #ffffff );
+  animation: priceCardIn 0.45s ease both;
+}
+
+.price-estimate-icon {
+  width: 50px;
+  height: 50px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 14px;
+  background: #dff3e5;
+  font-size: 24px;
+}
+
+.price-estimate-content {
+  flex: 1;
+}
+
+.price-estimate-label {
+  display: block;
+  color: #7b867f;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.price-estimate-total {
+  display: block;
+  margin-top: 3px;
+  color: #198754;
+  font-size: 25px;
+  font-weight: 900;
+}
+
+.price-estimate-details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 14px;
+  margin-top: 7px;
+  color: #66736b;
+  font-size: 10px;
+}
+
+@media (max-width: 500px) {
+  .price-estimate-card {
+    padding: 14px;
+  }
+}
+
+@media (max-width: 500px) {
+  .price-estimate-total {
+    font-size: 21px;
+  }
+}
+
+@media (max-width: 500px) {
+  .price-estimate-details {
+    flex-direction: column;
+    gap: 4px;
+  }
+}

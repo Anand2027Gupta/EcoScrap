@@ -1,0 +1,265 @@
+/* =========================================================
+   PROFILE PAGE
+   ========================================================= */
+
+.handover-step.active .handover-step-circle {
+  background: var(--primary);
+  color: white;
+  transform: scale(1.1);
+  animation: stepPop 0.45s ease;
+}
+
+.lot-filter-btn.active {
+  background: #198754;
+  color: white;
+  border-color: #198754;
+  box-shadow: 0 7px 18px rgba(25, 135, 84, 0.2);
+}
+
+.timeline-dot.active {
+  background: #198754;
+  color: white;
+  box-shadow: 0 0 0 6px rgba(25, 135, 84, 0.1);
+}
+
+.profile-page {
+  width: 100%;
+}
+
+.profile-page-header {
+  align-items: flex-start;
+}
+
+.profile-layout {
+  width: 100%;
+  max-width: 1050px;
+  margin: 0 auto;
+  display: grid;
+  gap: 20px;
+}
+
+.profile-card {
+  background: #ffffff;
+  border: 1px solid #e2e8e5;
+  border-radius: 16px;
+  padding: 22px;
+}
+
+.profile-main-card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.profile-avatar {
+  width: 78px;
+  height: 78px;
+  min-width: 78px;
+  border-radius: 50%;
+  background: #16a34a;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.profile-main-info h2 {
+  margin: 0 0 6px;
+  color: #172033;
+  font-size: 25px;
+}
+
+.profile-main-info p {
+  margin: 7px 0 0;
+  color: #64748b;
+}
+
+.profile-role {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 20px;
+  background: #effff0;
+  color: #166534;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.profile-section-header {
+  margin-bottom: 18px;
+}
+
+.profile-section-header h2 {
+  margin: 0 0 5px;
+  color: #172033;
+  font-size: 19px;
+}
+
+.profile-section-header p {
+  margin: 0;
+  color: #64748b;
+  font-size: 14px;
+}
+
+.profile-info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+
+.profile-info-item {
+  padding: 15px;
+  border-radius: 12px;
+  background: #f4f9f5;
+}
+
+.profile-info-item span {
+  display: block;
+  color: #64748b;
+  font-size: 13px;
+  margin-bottom: 6px;
+}
+
+.profile-info-item strong {
+  color: #172033;
+  word-break: break-word;
+}
+
+.language-options {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.language-option {
+  min-width: 130px;
+  padding: 12px 16px;
+  border-radius: 10px;
+  border: 1px solid #dbe5df;
+  background: #ffffff;
+  color: #172033;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.language-option:hover {
+  background: #f4f9f5;
+}
+
+.language-option.active {
+  background: #16a34a;
+  color: #ffffff;
+  border-color: #16a34a;
+}
+
+.profile-features {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+
+.profile-features > div {
+  display: flex;
+  gap: 12px;
+  padding: 15px;
+  border-radius: 12px;
+  background: #f7faf8;
+}
+
+.profile-features > div > span {
+  font-size: 25px;
+}
+
+.profile-features strong {
+  color: #172033;
+}
+
+.profile-features p {
+  margin: 4px 0 0;
+  color: #64748b;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.profile-danger-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  border-color: #fecaca;
+}
+
+.profile-danger-card h2 {
+  margin: 0 0 5px;
+  color: #172033;
+  font-size: 18px;
+}
+
+.profile-danger-card p {
+  margin: 0;
+  color: #64748b;
+  font-size: 14px;
+}
+
+.logout-button {
+  border: 1px solid #dc2626;
+  border-radius: 10px;
+  padding: 11px 18px;
+  background: #ffffff;
+  color: #dc2626;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.logout-button:hover {
+  background: #fff5f5;
+}
+
+@media (max-width: 700px) {
+  .profile-main-card {
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 700px) {
+  .profile-info-grid, .profile-features {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 700px) {
+  .profile-danger-card {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 700px) {
+  .logout-button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 500px) {
+  .profile-main-card {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 500px) {
+  .profile-avatar {
+    width: 68px;
+    height: 68px;
+    min-width: 68px;
+    font-size: 27px;
+  }
+}
+
+@media (max-width: 500px) {
+  .language-option {
+    width: 100%;
+  }
+}

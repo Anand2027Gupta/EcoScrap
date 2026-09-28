@@ -1,0 +1,87 @@
+/* =========================================================
+   RECYCLER CARD
+   ========================================================= */
+
+.recycler-card {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 18px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--card);
+  box-shadow: var(--shadow-sm);
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
+}
+
+.recycler-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--border-strong);
+  box-shadow: var(--shadow-md);
+}
+
+.recycler-card.selected {
+  border: 2px solid var(--primary);
+  background: var(--primary-soft);
+  animation: selectedPulse 0.4s ease;
+}
+
+.recycler-card-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.recycler-card-name {
+  color: var(--text-dark);
+  font-size: 17px;
+  font-weight: 750;
+  line-height: 1.35;
+}
+
+.recycler-auth-badge {
+  flex-shrink: 0;
+}
+
+.recycler-card-details {
+  display: grid;
+  gap: 9px;
+  color: var(--text);
+  font-size: 14px;
+}
+
+.recycler-card-details strong {
+  color: var(--muted);
+  font-weight: 700;
+}
+
+.recycler-card-price {
+  color: var(--primary-dark);
+  font-size: 17px;
+  font-weight: 800;
+}
+
+.recycler-select-btn {
+  width: 100%;
+  margin-top: 17px;
+  min-height: 46px;
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 480px) {
+  .recycler-card {
+    padding: 15px;
+  }
+
+  .recycler-card-name {
+    font-size: 16px;
+  }
+}

@@ -1,0 +1,34 @@
+/* =========================================================
+   RECYCLER LIST
+   ========================================================= */
+
+.recycler-list {
+  width: 100%;
+}
+
+.recycler-list-title {
+  margin: 0;
+  color: var(--text-dark);
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.recycler-list-subtitle {
+  margin: 6px 0 18px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.recycler-list-grid {
+  display: grid;
+  grid-template-columns:
+    repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
+}
+
+@media (max-width: 480px) {
+  .recycler-list-grid {
+    grid-template-columns: 1fr;
+    gap: 13px;
+  }
+}

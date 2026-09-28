@@ -1,0 +1,1030 @@
+/* =========================================================
+   ECOSCRAP — SHARED APPLICATION STYLES
+   Eco-Tech Premium
+   Tokens + reset live in index.css
+   ========================================================= */
+/* =========================================================
+   APP SHELL
+   ========================================================= */
+
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--background);
+}
+
+.page-enter {
+  animation: pageEnter 0.35s ease both;
+}
+
+.user-bar {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 14px 22px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.welcome-text {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.welcome-text strong {
+  color: var(--text-dark);
+}
+
+.logout-btn {
+  background: var(--card);
+  border: 1px solid var(--border-strong);
+  color: var(--text);
+}
+
+.logout-btn:hover {
+  background: var(--primary-soft);
+  border-color: var(--primary);
+  color: var(--primary-dark);
+}
+
+.page-content {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px 22px 64px;
+  flex: 1;
+}
+
+/* =========================================================
+   PAGE SCAFFOLDING
+   ========================================================= */
+
+.page-container {
+  width: 100%;
+}
+
+.page-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+}
+
+.page-header h1 {
+  margin: 0;
+  color: var(--text-dark);
+  font-size: 26px;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+
+/* =========================================================
+   BUTTONS (shared)
+   ========================================================= */
+
+.btn {
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 18px;
+  border: 1px solid transparent;
+  border-radius: var(--radius-sm);
+  background: var(--card);
+  color: var(--text);
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  transition:
+    background 0.18s ease,
+    border-color 0.18s ease,
+    color 0.18s ease,
+    box-shadow 0.18s ease,
+    transform 0.18s ease;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+.btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+  transform: none;
+  box-shadow: none;
+}
+
+.btn-primary {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: var(--text-on-primary);
+  box-shadow: 0 6px 16px rgba(22, 163, 74, 0.2);
+}
+
+.btn-primary:hover {
+  background: var(--primary-dark);
+  border-color: var(--primary-dark);
+}
+
+.btn-secondary {
+  background: var(--card);
+  border-color: var(--border-strong);
+  color: var(--text);
+}
+
+.btn-secondary:hover {
+  background: var(--primary-soft);
+  border-color: var(--primary);
+  color: var(--primary-dark);
+}
+
+.btn-danger {
+  background: var(--danger);
+  border-color: var(--danger);
+  color: #ffffff;
+}
+
+.btn-danger:hover {
+  filter: brightness(0.94);
+}
+
+.btn-small {
+  min-height: 36px;
+  padding: 7px 13px;
+  font-size: 13px;
+  border-radius: 9px;
+}
+
+.btn-large {
+  min-height: 50px;
+  padding: 13px 24px;
+  font-size: 15px;
+}
+
+.primary-button,
+.secondary-button {
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 17px;
+  border: 1px solid transparent;
+  border-radius: var(--radius-sm);
+  font-size: 14px;
+  font-weight: 700;
+  transition:
+    background 0.18s ease,
+    border-color 0.18s ease,
+    color 0.18s ease,
+    transform 0.18s ease;
+}
+
+.primary-button {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: var(--text-on-primary);
+  box-shadow: 0 6px 16px rgba(22, 163, 74, 0.2);
+}
+
+.primary-button:hover {
+  background: var(--primary-dark);
+  border-color: var(--primary-dark);
+  transform: translateY(-1px);
+}
+
+/* =========================================================
+   STATUS BADGES (shared)
+   ========================================================= */
+
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 5px 11px;
+  border: 1px solid transparent;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.status-badge .badge-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+.status-available {
+  background: #ecfdf3;
+  border-color: #bbf7d0;
+  color: #166534;
+}
+
+.status-requested {
+  background: #fff8ec;
+  border-color: #fde3b0;
+  color: #b45309;
+}
+
+.status-confirmed {
+  background: #eef6ff;
+  border-color: #c7ddf8;
+  color: #1d4ed8;
+}
+
+.status-handed {
+  background: #f0fdfa;
+  border-color: #b9e6df;
+  color: #0f766e;
+}
+
+.status-completed,
+.status-paid,
+.status-verified {
+  background: #eaf7ee;
+  border-color: #bfe3c9;
+  color: #166534;
+}
+
+.status-pending {
+  background: #fff8ec;
+  border-color: #fde3b0;
+  color: #b45309;
+}
+
+.status-default {
+  background: #f2f6f3;
+  border-color: var(--border);
+  color: var(--muted);
+}
+
+/* =========================================================
+   ALERTS (shared)
+   ========================================================= */
+
+.form-alert {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-top: 16px;
+  padding: 12px 14px;
+  border: 1px solid transparent;
+  border-radius: var(--radius-sm);
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.alert-icon {
+  flex-shrink: 0;
+  font-size: 15px;
+  line-height: 1.4;
+}
+
+.error-alert {
+  background: var(--danger-soft);
+  border-color: #f6d5d5;
+  color: #b91c1c;
+}
+
+.success-alert {
+  background: var(--primary-soft);
+  border-color: #bbf7d0;
+  color: var(--primary-dark);
+}
+
+.warning-alert {
+  background: var(--warning-soft);
+  border-color: #fde3b0;
+  color: #b45309;
+}
+
+.info-alert {
+  background: #f0fdfa;
+  border-color: #b9e6df;
+  color: #0f766e;
+}
+
+/* =========================================================
+   LOADING / EMPTY / ERROR STATES (shared)
+   ========================================================= */
+
+.loading-spinner {
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+  border: 3px solid var(--border-strong);
+  border-top-color: var(--primary);
+  border-radius: 50%;
+  animation: spin 0.75s linear infinite;
+}
+
+.loading-state,
+.empty-state,
+.error-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 42px 24px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: var(--card);
+  text-align: center;
+}
+
+.empty-state-icon,
+.error-state-icon {
+  font-size: 38px;
+  line-height: 1;
+}
+
+.empty-state h3,
+.error-state h3,
+.loading-state h3 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.empty-state p,
+.error-state p,
+.loading-state p {
+  max-width: 460px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.error-state {
+  border-color: #f6d5d5;
+}
+
+/* =========================================================
+   SECTION HEADINGS (shared)
+   ========================================================= */
+
+.section-heading {
+  margin-bottom: 18px;
+}
+
+.section-heading h2 {
+  margin: 0;
+  font-size: 21px;
+  font-weight: 800;
+}
+
+.section-heading h2 span {
+  color: var(--primary);
+}
+
+.section-heading p {
+  margin: 6px 0 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 900px) {
+  .page-content {
+    padding: 18px 16px 52px;
+  }
+
+  .user-bar {
+    padding: 12px 16px 0;
+  }
+}
+
+@media (max-width: 700px) {
+  .page-header h1 {
+    font-size: 23px;
+  }
+
+  .page-header-actions {
+    width: 100%;
+  }
+
+  .page-header-actions .btn,
+  .page-header-actions .primary-button,
+  .page-header-actions .secondary-button {
+    flex: 1;
+  }
+}
+
+@media (max-width: 480px) {
+  .page-content {
+    padding: 14px 12px 44px;
+  }
+
+  .user-bar {
+    padding: 10px 12px 0;
+  }
+
+  .page-header h1 {
+    font-size: 21px;
+  }
+}
+
+
+.secondary-button {
+  background: var(--card);
+  border-color: var(--border-strong);
+  color: var(--text);
+}
+
+.secondary-button:hover {
+  background: var(--primary-soft);
+  border-color: var(--primary);
+  color: var(--primary-dark);
+  transform: translateY(-1px);
+}
+
+.primary-button:disabled,
+.secondary-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+  transform: none;
+}
+
+}
+
+.page-header p {
+  max-width: 720px;
+  margin: 7px 0 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.page-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+
+/* =========================================================
+   ANIMATIONS
+   ========================================================= */
+
+@keyframes navbarSlide {
+  from {
+    opacity: 0;
+    transform: translateY(-12px);
+  }
+
+to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes brandFloat {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+
+50% {
+    transform: translateY(-3px) rotate(2deg);
+  }
+}
+
+@keyframes pageEnter {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+
+to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes cardAppear {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+
+to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes recycleFloat {
+  0%, 100% {
+    transform: rotate(-5deg) translateY(0);
+  }
+
+50% {
+    transform: rotate(5deg) translateY(-8px);
+  }
+}
+
+@keyframes cameraPulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(25, 135, 84, 0.22);
+  }
+
+50% {
+    box-shadow: 0 0 0 12px rgba(25, 135, 84, 0);
+  }
+}
+
+@keyframes imageReveal {
+  from {
+    opacity: 0;
+    transform: scale(0.94);
+  }
+
+to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes aiReveal {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes selectedPulse {
+  0% {
+    transform: scale(0.98);
+  }
+
+100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes stepPop {
+  0% {
+    transform: scale(0.8);
+  }
+
+70% {
+    transform: scale(1.18);
+  }
+
+100% {
+    transform: scale(1.1);
+  }
+}
+
+@keyframes messageIn {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+
+to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes reveal {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+
+to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes floatOrb {
+  0%, 100% {
+    transform: translateY(0);
+  }
+
+50% {
+    transform: translateY(-25px);
+  }
+}
+
+@keyframes logoFloat {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+
+50% {
+    transform: rotate(8deg);
+  }
+}
+
+@keyframes heroContentIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulseDot {
+  50% {
+    box-shadow: 0 0 0 9px rgba(25, 135, 84, 0);
+  }
+}
+
+@keyframes visualIn {
+  from {
+    opacity: 0;
+    transform: scale(0.85);
+  }
+
+to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes rotateRing {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes ecoPulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+
+50% {
+    transform: scale(1.06);
+  }
+}
+
+@keyframes floatingCard {
+  0%, 100% {
+    transform: translateY(0);
+  }
+
+50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes lotsFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+
+to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes lotCardIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes placeholderFloat {
+  50% {
+    transform: translateY(-7px);
+  }
+}
+
+@keyframes detailsIn {
+  from {
+    opacity: 0;
+    transform: scale(0.97) translateY(15px);
+  }
+
+to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes confidenceGrow {
+  from {
+    width: 0;
+  }
+}
+
+@keyframes earningsEnter {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+
+to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes earningsFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+
+50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes handoverEnter {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes currentStepPulse {
+  50% {
+    box-shadow: 0 0 0 7px rgba(25, 135, 84, 0.08);
+  }
+}
+
+@keyframes successPop {
+  0% {
+    transform: scale(0);
+  }
+
+70% {
+    transform: scale(1.15);
+  }
+
+100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes recyclerDashboardIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes requestCardIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+
+to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes recordEnter {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.98);
+  }
+
+to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes recordIconFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+
+50% {
+    transform: translateY(-6px);
+  }
+}
+
+@keyframes anomalyEnter {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+
+to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes safetyEnter {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+
+to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes addLotEnter {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes addLotIconFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+
+50% {
+    transform: translateY(-4px);
+  }
+}
+
+@keyframes previewEnter {
+  from {
+    opacity: 0;
+    transform: scale(0.97);
+  }
+
+to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes aiBoxIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes aiSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes aiResultIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px) scale(0.98);
+  }
+
+to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes checkPop {
+  0% {
+    transform: scale(0);
+  }
+
+70% {
+    transform: scale(1.2);
+  }
+
+100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes alertIn {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+
+to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes buttonSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes priceCardIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes recyclerSearchIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes selectedRecyclerIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px) scale(0.98);
+  }
+
+to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes handoverSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes handoverCardIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes lots-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

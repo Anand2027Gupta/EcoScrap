@@ -1,0 +1,39 @@
+/* =========================================================
+   EARNINGS PAGE
+   ========================================================= */
+
+.earnings-page {
+  width: 100%;
+}
+
+.earnings-page-header {
+  align-items: flex-start;
+}
+
+.earnings-content {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.earnings-content > div {
+  margin-top: 0 !important;
+}
+
+@media (max-width: 700px) {
+  .earnings-page-header {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 700px) {
+  .earnings-page-header .page-header-actions {
+    width: 100%;
+  }
+}
+
+@media (max-width: 700px) {
+  .earnings-page-header .primary-button, .earnings-page-header .secondary-button {
+    flex: 1;
+  }
+}

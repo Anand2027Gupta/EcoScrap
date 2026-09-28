@@ -1,0 +1,200 @@
+/* =========================================================
+   HANDOVER REQUEST
+   ========================================================= */
+
+.handover-request-card {
+  width: 100%;
+  padding: 25px;
+  border: 1px solid #dcefe2;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #ffffff, #f5fbf7);
+  box-sizing: border-box;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+  animation: handoverCardIn 0.45s ease both;
+}
+
+.handover-request-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  margin-bottom: 24px;
+}
+
+.handover-request-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ecfdf3;
+  font-size: 25px;
+  flex-shrink: 0;
+  min-width: 50px;
+}
+
+.handover-request-label {
+  display: block;
+  margin-bottom: 4px;
+  color: #16a34a;
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.handover-request-header h2 {
+  margin: 0 0 5px;
+  font-size: 22px;
+  color: #172033;
+}
+
+.handover-request-header p {
+  margin: 0;
+  color: #64748b;
+  line-height: 1.5;
+  font-size: 14px;
+}
+
+.handover-request-details {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.handover-detail {
+  padding: 15px;
+  border-radius: 13px;
+  background: #ffffff;
+  border: 1px solid #e8eee9;
+}
+
+.handover-detail span {
+  display: block;
+  margin-bottom: 5px;
+  color: #777;
+  font-size: 13px;
+}
+
+.handover-detail strong {
+  color: #222;
+  font-size: 15px;
+}
+
+.handover-estimated-value {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 18px;
+  margin-top: 5px;
+  border-radius: 15px;
+  background: #effaf3;
+  border: 1px solid #cfe8d6;
+}
+
+.handover-estimated-value span {
+  display: block;
+  margin-bottom: 4px;
+  font-weight: 700;
+  color: #246b3d;
+}
+
+.handover-estimated-value small {
+  color: #6d7c72;
+}
+
+.handover-estimated-value strong {
+  font-size: 25px;
+  color: #198754;
+  white-space: nowrap;
+}
+
+.handover-info-box {
+  display: flex;
+  gap: 10px;
+  margin-top: 16px;
+  padding: 14px;
+  border-radius: 12px;
+  background: #f8f9fa;
+  color: #555;
+}
+
+.handover-info-box span {
+  font-size: 18px;
+}
+
+.handover-info-box p {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.confirm-handover-btn {
+  width: 100%;
+  margin-top: 18px;
+  padding: 15px 20px;
+  border: none;
+  border-radius: 13px;
+  background: #198754;
+  color: white;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.confirm-handover-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(25, 135, 84, 0.22);
+}
+
+.confirm-handover-btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.handover-spinner {
+  width: 17px;
+  height: 17px;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  border-top-color: white;
+  border-radius: 50%;
+  animation: handoverSpin 0.7s linear infinite;
+}
+
+@media (max-width: 700px) {
+  .handover-request-card {
+    padding: 18px;
+  }
+}
+
+@media (max-width: 700px) {
+  .handover-request-details {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 700px) {
+  .handover-estimated-value {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 700px) {
+  .handover-estimated-value strong {
+    font-size: 23px;
+  }
+}
+
+@media (max-width: 700px) {
+  .handover-request-header {
+    gap: 10px;
+  }
+}

@@ -1,0 +1,165 @@
+/* =========================================================
+   MY LOTS PAGE
+   ========================================================= */
+
+.my-lots-page {
+  width: 100%;
+}
+
+.lots-filter-bar {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 25px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.lots-result-count {
+  margin-top: 15px;
+  color: #64748b;
+  font-size: 13px;
+}
+
+@media (max-width: 768px) {
+  .lots-filter-bar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+.lots-summary {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.lot-summary-card {
+  background: #ffffff;
+  border: 1px solid #e2e8e5;
+  border-radius: 14px;
+  padding: 18px;
+}
+
+.lot-summary-card span {
+  display: block;
+  color: #64748b;
+  font-size: 13px;
+  margin-bottom: 8px;
+}
+
+.lot-summary-card strong {
+  color: #166534;
+  font-size: 25px;
+}
+
+.lots-search-box {
+  flex: 1;
+  min-width: 280px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #ffffff;
+  border: 1px solid #dbe5df;
+  border-radius: 12px;
+  padding: 0 15px;
+}
+
+.lots-search-box input {
+  width: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 13px 0;
+  font-size: 14px;
+}
+
+.lots-status-filter {
+  min-width: 190px;
+  padding: 13px 14px;
+  border-radius: 12px;
+  border: 1px solid #dbe5df;
+  background: #ffffff;
+  color: #172033;
+  font-size: 14px;
+  outline: none;
+}
+
+.my-lots-content {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(350px, 0.8fr);
+  gap: 24px;
+  align-items: start;
+}
+
+.my-lots-list {
+  min-width: 0;
+}
+
+.my-lots-details {
+  min-width: 0;
+  position: sticky;
+  top: 20px;
+}
+
+.lots-page-state {
+  background: #ffffff;
+  border: 1px solid #e2e8e5;
+  border-radius: 16px;
+  padding: 55px 25px;
+  text-align: center;
+}
+
+.lots-page-state h3 {
+  margin: 10px 0 8px;
+  color: #172033;
+}
+
+.lots-page-state p {
+  margin: 0 0 20px;
+  color: #64748b;
+}
+
+.lots-loading-icon {
+  font-size: 42px;
+}
+
+.lots-error-state {
+  border-color: #fecaca;
+}
+
+@media (max-width: 1000px) {
+  .lots-summary {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 1000px) {
+  .my-lots-content {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 1000px) {
+  .my-lots-details {
+    position: static;
+  }
+}
+
+@media (max-width: 650px) {
+  .lots-summary {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 650px) {
+  .lots-search-box {
+    min-width: 100%;
+  }
+}
+
+@media (max-width: 650px) {
+  .lots-status-filter {
+    flex: 1;
+  }
+}
